@@ -14,4 +14,4 @@ const UserProvider = (props) => {
     </Provider>
   )
 }
-export { UserProvider, getThemeOverrides, userContext}
+export { UserProvider, getThemeOverrides, userContext }

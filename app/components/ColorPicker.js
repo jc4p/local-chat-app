@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import chroma from 'chroma-js'
-import { colorOptions } from '../theme'
+import { useTheme, colorOptions } from '../theme'
+import { userContext, getThemeOverrides } from '../store/index'
 import { TouchableOpacity, View } from 'react-native'
 
 const getSortedColors = () => {
@@ -27,6 +28,10 @@ const getSortedColors = () => {
 
 export default ColorPicker = ({ onPress }) => {
   const sortedColors = getSortedColors()
+  const [userSettings] = useContext(userContext)
+  const theme = useTheme(getThemeOverrides(userSettings))
+
+  const borderColor = theme.textColor
 
   return (
     <View
@@ -43,7 +48,7 @@ export default ColorPicker = ({ onPress }) => {
           style={{
             width: 60, height: 60, aspectRatio: 1.0, borderRadius: 15,
             backgroundColor: c.background,
-            borderColor: '#CCCCCC', borderWidth: 1,
+            borderColor: borderColor, borderWidth: 1,
             marginRight: 8,
             marginBottom: 10
             }}

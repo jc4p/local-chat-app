@@ -5,7 +5,7 @@ import { useTheme } from '../theme'
 import { userContext, getThemeOverrides } from '../store/index'
 
 export default Heading = ({ children }) => {
-  const [userSettings] = useContext(userContext)  
+  const [userSettings] = useContext(userContext)
   const theme = useTheme(getThemeOverrides(userSettings))
 
   return (

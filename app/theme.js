@@ -70,7 +70,7 @@ const fontOptions = [
     bold: 'IdealSans-Medium'
   },
   {
-    label: 'San Francisco (System Default)',
+    label: 'San Francisco',
     regular: 'System',
     bold: 'System'
   },
@@ -80,14 +80,19 @@ const fontOptions = [
     bold: 'AvenirNext-Bold'
   },
   {
+    label: 'Helvetica Neue Light',
+    regular: 'HelveticaNeue-Light',
+    bold: 'HelveticaNeue-Medium'
+  },
+  {
     label: 'Gill Sans',
     regular: 'GillSans-Light',
     bold: 'GillSans-Bold'
   },
   {
-    label: 'Helvetica Neue',
-    regular: 'HelveticaNeue-Light',
-    bold: 'HelveticaNeue-Bold'
+    label: 'Baskerville',
+    regular: 'Baskerville',
+    bold: 'Baskerville-Bold'
   },
   {
     label: 'Hoefler Text',
@@ -95,9 +100,9 @@ const fontOptions = [
     bold: 'HoeflerText-Regular'
   },
   {
-    label: 'Verdana',
-    regular: 'Verdana',
-    bold: 'Verdana-Bold'
+    label: 'Palatino',
+    regular: 'Palatino',
+    bold: 'Palatino'
   }
 ]
 
@@ -128,7 +133,7 @@ const views = {
 }
 
 const sizes = {
-  title: 38,
+  title: 36,
   heading: 24,
   label: 20,
   body: 18,
@@ -141,25 +146,23 @@ const text = {
   title: {
     fontSize: sizes.title,
     color: colors.textColor,
-    marginBottom: 10,
+    marginBottom: 8,
     fontFamily: fonts.regular
   },
   heading: {
     fontSize: sizes.heading,
     color: colors.textColor,
-    marginBottom: 10,
+    marginBottom: 8,
     fontFamily: fonts.regular
   },
   body: {
     fontSize: sizes.body,
     color: colors.textColor,
-    marginBottom: 5,
     fontFamily: fonts.regular
   },
   label: {
     fontSize: sizes.label,
     color: colors.textColor,
-    marginBottom: 10,
     fontFamily: fonts.regular
   },
   button: {
@@ -184,4 +187,4 @@ const defaultTheme = {
 
 const { ThemeProvider, useTheme } = createTheming(defaultTheme)
 
-export { ThemeProvider, useTheme, defaultTheme, colorOptions }
+export { ThemeProvider, useTheme, defaultTheme, colorOptions, fontOptions }
