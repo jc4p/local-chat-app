@@ -146,13 +146,11 @@ const text = {
   title: {
     fontSize: sizes.title,
     color: colors.textColor,
-    marginBottom: 8,
     fontFamily: fonts.regular
   },
   heading: {
     fontSize: sizes.heading,
     color: colors.textColor,
-    marginBottom: 8,
     fontFamily: fonts.regular
   },
   body: {
